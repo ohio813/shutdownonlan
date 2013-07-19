@@ -1,5 +1,7 @@
 #include "stdafx.h"
+
 #include "getMACAddresses.h"
+#include "globals.h"
 #include "log.h"
 
 DWORD readDataAndCheckForMagic(SOCKET oSocket) {
@@ -45,7 +47,7 @@ DWORD readDataAndCheckForMagic(SOCKET oSocket) {
             // Found 6 x 0xFF followed by 16 x MAC address: shut down.
             if (!InitiateSystemShutdownEx(
               NULL, // This machine
-              _T("Shutdown-on-LAN requested."),
+              gsShutdownReason,
               0, // Shut down immediately
               TRUE, // Force-close applications (do not save data)
               FALSE, // Do not reboot
