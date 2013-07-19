@@ -51,7 +51,7 @@ DWORD readDataAndCheckForMagic(SOCKET oSocket) {
               0, // Shut down immediately
               TRUE, // Force-close applications (do not save data)
               FALSE, // Do not reboot
-              SHTDN_REASON_MAJOR_OTHER | SHTDN_REASON_MINOR_OTHER | SHTDN_REASON_FLAG_PLANNED
+              gdwShutdownReason
             )) {
               DWORD dwErrorCode = GetLastError();
               logError(_T("InitiateSystemShutdownEx failed: error code %d (0x%X)."), dwErrorCode, dwErrorCode);

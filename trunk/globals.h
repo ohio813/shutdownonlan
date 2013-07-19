@@ -3,6 +3,7 @@
 extern LPTSTR                gsServiceName;
 extern LPTSTR                gsServiceDescription;
 extern LPTSTR                gsShutdownReason;
+extern DWORD                 gdwShutdownReason;
 extern int                   gaiPorts[2];
 
 extern BOOL                  gbThisIsAServiceProcess;
