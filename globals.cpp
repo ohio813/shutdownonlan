@@ -2,6 +2,7 @@
 
 LPTSTR                gsServiceName = _T("ShutdownOnLAN");
 LPTSTR                gsServiceDescription = _T("Shutdown-on-LAN network listener");
+LPTSTR                gsShutdownReason = _T("Shutdown-on-LAN requested.");
 int                   gaiPorts[2] = {7, 9};
 
 BOOL                  gbThisIsAServiceProcess = FALSE;
